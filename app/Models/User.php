@@ -21,7 +21,12 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'gender',
+        'type',
+        'age_range',
+        'causes'
     ];
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -40,5 +45,6 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'causes' => 'array',
     ];
 }
