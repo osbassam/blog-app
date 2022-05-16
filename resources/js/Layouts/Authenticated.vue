@@ -38,6 +38,12 @@ const navigation = [
         icon: BeakerIcon,
         current: route().current('medicals') == true ? true : false
     },
+    {
+        name: 'Games',
+        href: "/games",
+        icon: BeakerIcon,
+        current: route().current('games') == true ? true : false
+    },
 ]
 const secondaryNavigation = []
 const cards = [
@@ -71,7 +77,7 @@ const showingNavigationDropdown = ref(false);
 </script>
 
 <template>
-    <div class="min-h-full">
+    <div class="h-screen bg-gradient-to-r from-purple-500 to-pink-500 pb-52">
         <TransitionRoot as="template" :show="sidebarOpen">
             <Dialog as="div" class="relative z-40 lg:hidden" @close="sidebarOpen = false">
                 <TransitionChild as="template" enter="transition-opacity ease-linear duration-300"
@@ -166,7 +172,7 @@ const showingNavigationDropdown = ref(false);
                     <MenuAlt1Icon class="h-6 w-6" aria-hidden="true"/>
                 </button>
                 <!-- Search bar -->
-                <div class="flex-1 px-4 flex justify-end sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
+                <div class="flex-1 px-4 flex justify-end sm:px-6  lg:px-8 bg-gradient-to-r from-purple-500 to-pink-500">
                     <div class="ml-4 flex items-center md:ml-6">
                         <!-- Profile dropdown -->
                         <Menu as="div" class="ml-3 relative">
@@ -200,9 +206,9 @@ const showingNavigationDropdown = ref(false);
                     </div>
                 </div>
             </div>
-            <main class="flex-1 pb-8">
+            <main class="flex-1 pb-8 rounded-md bg-gradient-to-r from-purple-500 to-pink-500">
                 <!-- Page header -->
-                <div class="bg-white shadow">
+                <div class="bg-gradient-to-r from-purple-500 to-pink-500">
                     <div class="px-4 sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
                         <div class="py-2 md:flex md:items-center md:justify-between">
                         </div>
@@ -210,7 +216,7 @@ const showingNavigationDropdown = ref(false);
                 </div>
 
                 <div class="mt-8">
-                    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-500 to-pink-500  rounded-lg">
                         <slot>
 
                         </slot>

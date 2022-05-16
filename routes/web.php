@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\FAQController;
+use App\Http\Controllers\FlippingCardController;
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\MedicalProfessionalController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -25,6 +27,9 @@ Route::get('/', function () {
 Route::get('/faq', [FAQController::class , 'index'])->name('faq');
 Route::get('/about-us' , [AboutUsController::class, 'index'])->name('about');
 Route::get('/medical-professionals' , [MedicalProfessionalController::class , 'index'])->name('medicals');
+Route::get('/flipping-cards' , [FlippingCardController::class , 'index'])->name('flipping-cards');
+
+Route::get('/games' , [GameController::class , 'index'])->name('games');
 
 
 require __DIR__ . '/auth.php';
