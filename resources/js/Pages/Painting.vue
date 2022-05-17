@@ -52,15 +52,35 @@ export default {
                     controlContent: '#434649'
                 },
                 defaultTool: 'brush',
-                hiddenTools: ['crop', 'line', 'arrow', 'rect', 'ellipse', 'text', 'rotate', 'resize', 'save', 'open', 'undo', 'redo', 'zoomin', 'zoomout', 'bucket'],
+                hiddenTools: ['crop'],
                 backplateImgUrl: '../storage/img/painting(1).jpeg',
                 how_to_paste_actions: ['replace_all'],
                 saveHandler: (image, done) => {
-                    const type = 'image/png';
-                    const file = new File([image.asBlob(type)], "file.png", {
-                        type: type,
-                    });
-                    this.add_file(file);
+                    const base64string = "";
+                    const pageImage = new Image();
+                    pageImage.src = 'data:image/png;base64,' + base64string;
+                    pageImage.onload = function() {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = pageImage.naturalWidth;
+                        canvas.height= pageImage.naturalHeight;
+
+                        const ctx = canvas.getContext('2d');
+                        ctx.imageSmoothingEnabled = false;
+                        ctx.drawImage(pageImage, 0, 0);
+                        console.log(canvas, pageImage)
+                        saveScreenshot(canvas);
+                    }
+                    function saveScreenshot(canvas) {
+                        let fileName = "image"
+                        const link = document.createElement('a');
+                        link.download = fileName + '.png';
+                        console.log(canvas)
+                        canvas.toBlob(function(blob) {
+                            console.log(blob)
+                            link.href = URL.createObjectURL(blob);
+                            link.click();
+                        });
+                    };
                     done(true); //done and hide painterro
                 }
             });
@@ -68,9 +88,6 @@ export default {
     },
     methods: {
         openPainterro(img) {
-            console.log(img)
-            // this.painterro.backplateImgUrl = img;
-            console.log(this.painterro.backplateImgUrl);
             this.painterro.show(
                 img
             );
@@ -90,3 +107,4 @@ export default {
     box-shadow: 0 0 20px 5px #505050;
 }
 </style>
+.env

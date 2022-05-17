@@ -24749,17 +24749,38 @@ var __default__ = {
           controlContent: '#434649'
         },
         defaultTool: 'brush',
-        hiddenTools: ['crop', 'line', 'arrow', 'rect', 'ellipse', 'text', 'rotate', 'resize', 'save', 'open', 'undo', 'redo', 'zoomin', 'zoomout', 'bucket'],
+        hiddenTools: ['crop'],
         backplateImgUrl: '../storage/img/painting(1).jpeg',
         how_to_paste_actions: ['replace_all'],
         saveHandler: function saveHandler(image, done) {
-          var type = 'image/png';
-          var file = new File([image.asBlob(type)], "file.png", {
-            type: type
-          });
+          var base64string = "";
+          var pageImage = new Image();
+          pageImage.src = 'data:image/png;base64,' + base64string;
 
-          _this.add_file(file);
+          pageImage.onload = function () {
+            var canvas = document.createElement('canvas');
+            canvas.width = pageImage.naturalWidth;
+            canvas.height = pageImage.naturalHeight;
+            var ctx = canvas.getContext('2d');
+            ctx.imageSmoothingEnabled = false;
+            ctx.drawImage(pageImage, 0, 0);
+            console.log(canvas, pageImage);
+            saveScreenshot(canvas);
+          };
 
+          function saveScreenshot(canvas) {
+            var fileName = "image";
+            var link = document.createElement('a');
+            link.download = fileName + '.png';
+            console.log(canvas);
+            canvas.toBlob(function (blob) {
+              console.log(blob);
+              link.href = URL.createObjectURL(blob);
+              link.click();
+            });
+          }
+
+          ;
           done(true); //done and hide painterro
         }
       });
@@ -24767,9 +24788,6 @@ var __default__ = {
   },
   methods: {
     openPainterro: function openPainterro(img) {
-      console.log(img); // this.painterro.backplateImgUrl = img;
-
-      console.log(this.painterro.backplateImgUrl);
       this.painterro.show(img);
     }
   }
