@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-    <BreezeAuthenticatedLayout>
+    <Blog>
         <div class="bg-white shadow overflow-hidden sm:rounded-md">
             <ul role="list" class="divide-y divide-gray-200">
                 <li v-for="application in applications" :key="application.applicant.email">
@@ -30,11 +30,11 @@
             </ul>
         </div>
 
-    </BreezeAuthenticatedLayout>
+    </Blog>
 </template>
 
 <script setup>
-import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
+import Blog from '@/Pages/Blog.vue';
 import { CheckCircleIcon, ChevronRightIcon, MailIcon } from '@heroicons/vue/solid'
 
 const applications = [
@@ -71,8 +71,20 @@ const applications = [
         },
         date: '2020-01-07',
         dateFull: 'January 7, 2020',
-        stage: 'Completed phone screening',
-        href: '#',
+        stage: 'Play drawing game',
+        href: '/drawing',
+    },
+    {
+        applicant: {
+            name: 'Coloring',
+            email: 'ted.fox@example.com',
+            imageUrl:
+                'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        },
+        date: '2020-01-07',
+        dateFull: 'January 7, 2020',
+        stage: 'Coloring game',
+        href: '/painting',
     },
 ]
 </script>

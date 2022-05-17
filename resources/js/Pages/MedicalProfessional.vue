@@ -1,5 +1,5 @@
 <script setup>
-import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue'
+import Blog from '@/Pages/Blog.vue'
 
 const people = [
     {
@@ -43,7 +43,7 @@ const people = [
 </script>
 
 <template>
-    <BreezeAuthenticatedLayout>
+    <Blog>
 
         <div class="bg-white">
             <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
@@ -73,5 +73,5 @@ const people = [
                 </div>
             </div>
         </div>
-    </BreezeAuthenticatedLayout>
+    </Blog>
 </template>
