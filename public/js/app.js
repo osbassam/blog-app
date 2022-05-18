@@ -25435,7 +25435,7 @@ var _hoisted_1 = /*#__PURE__*/_withScopeId(function () {
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "md:7/12 flex justify-center lg:w-6/12 ml-44"
+    "class": "md:7/12 ml-60 flex justify-center lg:w-6/12"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
     "class": "text-2xl font-bold md:text-5xl border-animate"
   }, "About Us"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
@@ -26355,9 +26355,9 @@ var _hoisted_1 = /*#__PURE__*/_withScopeId(function () {
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "container m-auto px-6 text-gray-600 md:px-12 xl:px-6"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
+    "class": "space-y-6 md:space-y-0 md:flex md:gap-6 ml-52 lg:items-center lg:gap-12"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    "class": "md:7/12 lg:w-6/12 ml-52 flex justify-center"
+    "class": "md:7/12 lg:w-6/12 flex justify-center"
   }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
     "class": "text-2xl font-bold md:text-5xl border-animate"
   }, "Our Message"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {

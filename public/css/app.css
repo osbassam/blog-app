@@ -785,6 +785,12 @@ select {
 .ml-36 {
   margin-left: 9rem;
 }
+.ml-60 {
+  margin-left: 15rem;
+}
+.ml-48 {
+  margin-left: 12rem;
+}
 .block {
   display: block;
 }
