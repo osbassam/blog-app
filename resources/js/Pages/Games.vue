@@ -60,7 +60,7 @@ const applications = [
         date: '2020-01-07',
         dateFull: 'January 7, 2020',
         stage: 'Create your Own to do list',
-        href: '#',
+        href: '/to-do',
     },
     {
         applicant: {

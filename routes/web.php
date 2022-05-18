@@ -7,6 +7,7 @@ use App\Http\Controllers\FlippingCardController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\MedicalProfessionalController;
 use App\Http\Controllers\PaintingController;
+use App\Http\Controllers\ToDoListController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -36,6 +37,8 @@ Route::get('/games' , [GameController::class , 'index'])->name('games');
 Route::get('/drawing' , [DrawingController::class , 'index'])->name('drawing');
 
 Route::get('/painting' , [PaintingController::class , 'index'])->name('painting');
+
+Route::get('/to-do' , [ToDoListController::class , 'index'])->name('to-do');
 
 Route::get('/blog' , function () {
     return Inertia::render('Blog');

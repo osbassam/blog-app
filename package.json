@@ -32,6 +32,7 @@
         "@tailwindcss/aspect-ratio": "^0.4.0",
         "@vue-hero-icons/outline": "^1.7.2",
         "@vue-hero-icons/solid": "^1.7.2",
+        "animate.css": "^4.1.1",
         "painterro": "^1.2.78",
         "vue-flip": "^2.2.0",
         "vue-flip-toolkit": "^1.6.0",
