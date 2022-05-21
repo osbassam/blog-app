@@ -105,9 +105,9 @@ const submit = () => {
             </div>
             <div class="mt-4 mb-2">
                 <label for="causes" class="block text-sm font-medium text-gray-700" v-if="form.type === 'parent'">Has
-                    your child experienced any of this recently?</label>
+                    your child experienced any of these recently?</label>
                 <label for="causes" class="block text-sm font-medium text-gray-700" v-else>Have you experienced any of
-                    this recently?</label>
+                    these recently?</label>
                 <div class="relative flex items-start mt-1" v-for="cause in causesCheckBoxes">
                     <div class="flex items-center h-5">
                         <input @click="addCause(cause.cause)" :id="'cause' + cause.id" aria-describedby="comments-description"
