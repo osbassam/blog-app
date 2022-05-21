@@ -22,17 +22,17 @@ import Blog from '@/Pages/Blog.vue';
                             <vue-flip active-click="" width="300px" height="400px">
                                 <template v-slot:front class="front w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1
                                                 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-                                    <img :src="'../storage/img/' + card.imgSrc" @click="toggleCard(card)"
+                                    <img :src="card.imgSrc" @click="toggleCard(card)"
                                          alt="product.imageAlt"
                                          class="mx-4 w-full h-full object-center object-cover lg:w-full lg:h-full"/>
-                                    <span class="">click</span>
+                                    <span class="text-center">click</span>
                                 </template>
                                 <template v-slot:back class="back w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1
                                                 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-                                    <img :src="'../storage/img/' + logo" @click="toggleCard(card)"
+                                    <img :src="logo" @click="toggleCard(card)"
                                          alt="product.imageAlt"
                                          class="mx-4 w-full h-full object-center object-cover lg:w-full lg:h-full"/>
-                                    <span class=""> click</span>
+                                    <span class="text-center"> click</span>
                                 </template>
                             </vue-flip>
 
@@ -45,7 +45,6 @@ import Blog from '@/Pages/Blog.vue';
 
     </Blog>
 </template>
-
 <script>
 import Painterro from 'painterro';
 import VueFlip from 'vue-flip';
@@ -54,55 +53,55 @@ export default {
     data() {
         return {
             painterro: null,
-            logo:'logo.jpeg',
+            logo:'https://i.ibb.co/LpjXR8c/logo.jpg',
             cards: [
                 {
                     front: 'The "First Computer Programmer"',
                     back: 'Ada Lovelace',
                     flipped: false,
-                    imgSrc: 'img1.jpeg',
+                    imgSrc: 'https://i.ibb.co/VDK02hp/img4.jpg',
                     imgSrcBack: 'img3.jpeg'
                 },
                 {
                     front: 'Invented the "Clarke Calculator"',
                     back: 'Edith Clarke',
                     flipped: false,
-                    imgSrc: 'img3.jpeg',
+                    imgSrc: 'https://i.ibb.co/hZshy8x/img1.jpg',
                     imgSrcBack: 'img2.jpeg'
                 },
                 {
                     front: 'Famous World War II Enigma code breaker',
                     back: 'Alan Turing',
                     flipped: false,
-                    imgSrc: 'img2.jpeg',
+                    imgSrc: 'https://i.ibb.co/3fSZ9hk/img2.jpg',
                     imgSrcBack: 'img1.jpeg'
                 },
                 {
                     front: 'Famous World War II Enigma code breaker',
                     back: 'Alan Turing',
                     flipped: false,
-                    imgSrc: 'img4.jpeg',
+                    imgSrc: 'https://i.ibb.co/yXTBFW8/img3.jpg',
                     imgSrcBack: 'img1.jpeg'
                 },
                 {
                     front: 'Famous World War II Enigma code breaker',
                     back: 'Alan Turing',
                     flipped: false,
-                    imgSrc: 'img5.jpeg',
+                    imgSrc: 'https://i.ibb.co/C1wv8jC/img5.jpg',
                     imgSrcBack: 'img1.jpeg'
                 },
                 {
                     front: 'Famous World War II Enigma code breaker',
                     back: 'Alan Turing',
                     flipped: false,
-                    imgSrc: 'img6.jpeg',
+                    imgSrc: 'https://i.ibb.co/dDpsdpg/img7.jpg',
                     imgSrcBack: 'img1.jpeg'
                 },
                 {
                     front: 'Famous World War II Enigma code breaker',
                     back: 'Alan Turing',
                     flipped: false,
-                    imgSrc: 'img7.jpeg',
+                    imgSrc: 'https://i.ibb.co/MhDr4yB/img6.jpg',
                     imgSrcBack: 'img1.jpeg'
                 },
             ],

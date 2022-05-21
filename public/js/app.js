@@ -24613,48 +24613,48 @@ var __default__ = {
   data: function data() {
     return {
       painterro: null,
-      logo: 'logo.jpeg',
+      logo: 'https://i.ibb.co/LpjXR8c/logo.jpg',
       cards: [{
         front: 'The "First Computer Programmer"',
         back: 'Ada Lovelace',
         flipped: false,
-        imgSrc: 'img1.jpeg',
+        imgSrc: 'https://i.ibb.co/VDK02hp/img4.jpg',
         imgSrcBack: 'img3.jpeg'
       }, {
         front: 'Invented the "Clarke Calculator"',
         back: 'Edith Clarke',
         flipped: false,
-        imgSrc: 'img3.jpeg',
+        imgSrc: 'https://i.ibb.co/hZshy8x/img1.jpg',
         imgSrcBack: 'img2.jpeg'
       }, {
         front: 'Famous World War II Enigma code breaker',
         back: 'Alan Turing',
         flipped: false,
-        imgSrc: 'img2.jpeg',
+        imgSrc: 'https://i.ibb.co/3fSZ9hk/img2.jpg',
         imgSrcBack: 'img1.jpeg'
       }, {
         front: 'Famous World War II Enigma code breaker',
         back: 'Alan Turing',
         flipped: false,
-        imgSrc: 'img4.jpeg',
+        imgSrc: 'https://i.ibb.co/yXTBFW8/img3.jpg',
         imgSrcBack: 'img1.jpeg'
       }, {
         front: 'Famous World War II Enigma code breaker',
         back: 'Alan Turing',
         flipped: false,
-        imgSrc: 'img5.jpeg',
+        imgSrc: 'https://i.ibb.co/C1wv8jC/img5.jpg',
         imgSrcBack: 'img1.jpeg'
       }, {
         front: 'Famous World War II Enigma code breaker',
         back: 'Alan Turing',
         flipped: false,
-        imgSrc: 'img6.jpeg',
+        imgSrc: 'https://i.ibb.co/dDpsdpg/img7.jpg',
         imgSrcBack: 'img1.jpeg'
       }, {
         front: 'Famous World War II Enigma code breaker',
         back: 'Alan Turing',
         flipped: false,
-        imgSrc: 'img7.jpeg',
+        imgSrc: 'https://i.ibb.co/MhDr4yB/img6.jpg',
         imgSrcBack: 'img1.jpeg'
       }],
       newFront: '',
@@ -26604,7 +26604,7 @@ var _hoisted_7 = ["src", "onClick"];
 
 var _hoisted_8 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-    "class": ""
+    "class": "text-center"
   }, "click", -1
   /* HOISTED */
   );
@@ -26614,7 +26614,7 @@ var _hoisted_9 = ["src", "onClick"];
 
 var _hoisted_10 = /*#__PURE__*/_withScopeId(function () {
   return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-    "class": ""
+    "class": "text-center"
   }, " click", -1
   /* HOISTED */
   );
@@ -26634,7 +26634,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         }, {
           front: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
             return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-              src: '../storage/img/' + card.imgSrc,
+              src: card.imgSrc,
               onClick: function onClick($event) {
                 return $options.toggleCard(card);
               },
@@ -26646,7 +26646,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           }),
           back: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
             return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-              src: '../storage/img/' + $data.logo,
+              src: $data.logo,
               onClick: function onClick($event) {
                 return $options.toggleCard(card);
               },
