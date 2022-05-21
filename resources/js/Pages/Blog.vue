@@ -55,13 +55,16 @@ const showingNavigationDropdown = ref(false);
         <div class="container mx-auto flex items-center">
             <div class="flex text-white font-extrabold">
                 <a class="flex text-white text-base no-underline hover:text-white hover:no-underline" href="#">
-                    👻 <span class="hidden w-0 md:w-auto md:block pl-1">Ghostwind CSS</span>
+                    👻 <span class="hidden w-0 md:w-auto md:block pl-1">One Life</span>
                 </a>
             </div>
             <div class="flex pl-4 text-sm">
                 <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
                     <li v-for="item in navigation" :key="item.name"  class="mr-2">
                         <a class="inline-block py-2 px-2 text-white no-underline" :href="item.href">{{item.name}}</a>
+                    </li>
+                    <li class="mr-2 self-end" >
+                        <button class="py-2 px-2 text-white no-underline" @click="logout">Logout</button>
                     </li>
                 </ul>
             </div>
@@ -155,7 +158,11 @@ const showingNavigationDropdown = ref(false);
 
 <script>
 export default {
-
+    methods:{
+        logout(){
+            this.$inertia.post(route('logout'));
+        }
+    }
 }
 </script>
 

@@ -11,12 +11,12 @@ import {Head} from '@inertiajs/inertia-vue3';
             <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="text-center">
-                        <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-                            <div class="space-y-6 md:space-y-0 md:flex md:gap-6 ml-52 lg:items-center lg:gap-12">
+                        <div class="ml-56 container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+                            <div class="space-y-6 md:space-y-0 md:flex md:gap-6  lg:items-center lg:gap-12">
                                 <div class="md:7/12 lg:w-6/12  flex justify-center ">
                                     <div>
                                         <h2 class="text-2xl  font-bold md:text-5xl border-animate">Our Message</h2>
-                                        <p class="text-2xl flex justify-center  font-semibold"> This blog is to raise awareness about depression in the
+                                        <p class="text-2xl flex justify-center my-12  font-semibold"> This blog is to raise awareness about depression in the
                                             younger generation and to give tips and advice on how to create a healthy relationship
                                             between children and parents where both parties can communicate and help each other out
                                             in the best way possible. Read more to find the signs of depression in kids/teens, how
@@ -40,6 +40,9 @@ export default{
         return{
             count:25
         }
+    },
+    methods:{
+
     }
 }
 </script>
